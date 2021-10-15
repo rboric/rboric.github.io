@@ -13,6 +13,7 @@
     <div class="mb-10 text-center">
         <h1 class="text-5xl font-semibold my-10 text-white">Rene Borić</h1>
         <img src="img/slika.png" alt="" class="mx-auto my-2 w-2/12 rounded-full border-2 border-gray-200 border-opacity-20 shadow-2xl">
+        <hr class="mt-10 mb-10 w-2/12 mx-auto border-opacity-30">
     </div>
     <div class="mt-3 w-2/6 mx-auto text-center">
        <i class="text-white font-semibold">Zovem se Rene, imam 20 godina. Studiram na fakultetu informatike u Puli i trenutno sam na trećoj godini preddiplomskog studija.</i>
@@ -22,5 +23,22 @@
         <i onclick="window.location.href='https://www.instagram.com/renco1901/'" class="fab fa-instagram hover:text-yellow-300 transition-colors cursor-pointer"></i>
         <i onclick="window.location.href='https://github.com/rboric/rboric.github.io'" class="fab fa-github hover:text-yellow-300 transition-colors cursor-pointer"></i>
     </div>
+    <div class="mx-auto w-2/6 mt-96 my-36 text-center">
+        <h1 class="text-5xl font-semibold my-10">Kontakt</h1>
+        <form class="grid grid-cols-2 gap-6" action="" id="contactform">
+            <input placeholder="Ime" class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 focus:border-none h-12 rounded-md" type="text" name="ime" id="">
+            <input placeholder="E-mail" class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 h-12 rounded-md"type="email" name="email" id="">
+            <textarea placeholder="Napiši nešto.." class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 col-span-2 rounded-md" name="message" id="" rows="10" form="contactform"></textarea> 
+        </form>
+        <button onclick="kontaktAlert()" style="color: #202020;" class="transition-colors hover:bg-yellow-200 font-semibold mt-6 rounded-md w-1/6 h-10 text-center bg-yellow-300">Pošalji</button>
+        <hr class="mt-20 mb-10 w-6/12 border-gray-400 mx-auto">
+    </div>
 </body>
+
+<script>
+    function kontaktAlert(){
+        alert("Poruka poslana uspješno!")
+    }
+</script>
+
 </html>
