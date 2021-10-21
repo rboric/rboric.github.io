@@ -1,3 +1,7 @@
+(function(){
+    emailjs.init("user_wEt5WCp8s9KRRA3wb3Wii");
+ })();
+
 function sendMail(params) {
     var tempParams = {
         from_name:document.getElementById("name").value,
