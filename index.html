@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
     <script src="https://kit.fontawesome.com/6038ef2b55.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+    </script>
+    <script src="./contactForm.js"></script>
 </head>
 <body>
     <div class="mb-10 text-center">
@@ -26,19 +30,18 @@
     <div class="mx-auto w-2/6 mt-96 my-36 text-center">
         <h1 class="text-5xl font-semibold my-10">Kontakt</h1>
         <form class="grid grid-cols-2 gap-6" action="" id="contactform">
-            <input placeholder="Ime" class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 focus:border-none h-12 rounded-md" type="text" name="ime" id="">
-            <input placeholder="E-mail" class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 h-12 rounded-md"type="email" name="email" id="">
-            <textarea placeholder="Napiši nešto.." class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 col-span-2 rounded-md" name="message" id="" rows="10" form="contactform"></textarea> 
+            <input placeholder="Ime" class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 focus:border-none h-12 rounded-md" type="text" id="name">
+            <input placeholder="E-mail" class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 h-12 rounded-md" type="email" id="email">
+            <textarea placeholder="Napiši nešto.." class="focus:outline-none p-3 focus:border-gray-300 focus:placeholder-gray-300 border border-gray-400 col-span-2 rounded-md" id="message" rows="10" form="contactform"></textarea> 
         </form>
-        <button onclick="kontaktAlert()" style="color: #202020;" class="transition-colors hover:bg-yellow-200 font-semibold mt-6 rounded-md w-1/6 h-10 text-center bg-yellow-300">Pošalji</button>
+        <button onclick="sendMail()" style="color: #202020;" class="transition-colors hover:bg-yellow-200 font-semibold mt-6 rounded-md w-1/6 h-10 text-center bg-yellow-300" type="submit">Pošalji</button>
         <hr class="mt-20 mb-10 w-6/12 border-gray-400 mx-auto">
     </div>
 </body>
-
-<script>
-    function kontaktAlert(){
-        alert("Poruka poslana uspješno!")
-    }
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_wEt5WCp8s9KRRA3wb3Wii");
+   })();
 </script>
 
 </html>
